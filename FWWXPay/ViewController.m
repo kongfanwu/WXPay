@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+
+#import "FWPayManager.h"
+
 #import "WXApiObject.h"
 #import "WXApi.h"
 
@@ -29,12 +32,27 @@
     request.timeStamp= [@"1397527777" intValue];
     request.sign= @"582282D72DD2B03AD892830965F428CB16E7A256";
     [WXApi sendReq:request];
-    return;
-    NSString *res = [ViewController jumpToBizPay];
-    if( ![@"" isEqual:res] ){
-        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付失败" message:res delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alter show];
-    }
+    
+    [FWPayManager.sharedInstance sendReq:request onRespBlock:^(BaseResp *resp) {
+        if([resp isKindOfClass:[PayResp class]]){
+            //支付返回结果，实际支付结果需要去微信服务器端查询
+            NSString *strMsg,*strTitle = [NSString stringWithFormat:@"支付结果"];
+            
+            switch (resp.errCode) {
+                case WXSuccess:
+                    strMsg = @"支付结果：成功！";
+                    NSLog(@"支付成功－PaySuccess，retcode = %d", resp.errCode);
+                    break;
+                    
+                default:
+                    strMsg = [NSString stringWithFormat:@"支付结果：失败！retcode = %d, retstr = %@", resp.errCode,resp.errStr];
+                    NSLog(@"错误，retcode = %d, retstr = %@", resp.errCode,resp.errStr);
+                    break;
+            }
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:strTitle message:strMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
 }
 
 

@@ -22,6 +22,7 @@
 		4B39DA77209AC9F70015C420 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B39DA76209AC9F70015C420 /* CFNetwork.framework */; };
 		4B39DA86209AD5AC0015C420 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B39DA83209AD5AC0015C420 /* README.txt */; };
 		4B39DA87209AD5AC0015C420 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B39DA85209AD5AC0015C420 /* libWeChatSDK.a */; };
+		4B39DA8A209AFBBD0015C420 /* FWPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B39DA89209AFBBD0015C420 /* FWPayManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		4B39DA83209AD5AC0015C420 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		4B39DA84209AD5AC0015C420 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		4B39DA85209AD5AC0015C420 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		4B39DA88209AFBBD0015C420 /* FWPayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWPayManager.h; sourceTree = "<group>"; };
+		4B39DA89209AFBBD0015C420 /* FWPayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWPayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				4B39DA80209AD5AC0015C420 /* WechatSDK1.8.2 */,
 				4B39DA4B209AC9590015C420 /* AppDelegate.h */,
 				4B39DA4C209AC9590015C420 /* AppDelegate.m */,
+				4B39DA88209AFBBD0015C420 /* FWPayManager.h */,
+				4B39DA89209AFBBD0015C420 /* FWPayManager.m */,
 				4B39DA4E209AC9590015C420 /* ViewController.h */,
 				4B39DA4F209AC9590015C420 /* ViewController.m */,
 				4B39DA51209AC9590015C420 /* Main.storyboard */,
@@ -202,6 +207,7 @@
 				4B39DA50209AC9590015C420 /* ViewController.m in Sources */,
 				4B39DA5B209AC95A0015C420 /* main.m in Sources */,
 				4B39DA4D209AC9590015C420 /* AppDelegate.m in Sources */,
+				4B39DA8A209AFBBD0015C420 /* FWPayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
