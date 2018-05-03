@@ -42,8 +42,19 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    [WXApi registerApp:@"wxd930ea5d5a258f4f"];
+
+    NSString *url = @"www.baidu.com/abc/wxPay?param=1&success=successValue&faile=faileValue&payUrl=payurlValue";
+    NSArray *urlArray = [url componentsSeparatedByString:@"?"];
+    NSString *methorName = [[[urlArray firstObject] componentsSeparatedByString:@"/"] lastObject];
+    NSLog(@"methorName:%@", methorName);
+    NSArray *paramArray = [urlArray.lastObject componentsSeparatedByString:@"&"];
+    
+    [paramArray enumerateObjectsUsingBlock:^(NSString * _Nonnull paramStr, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSArray *paramStrArray = [paramStr componentsSeparatedByString:@"="];
+        NSString *paramKey = paramStrArray.firstObject;
+        NSString *paramValue = paramStrArray.lastObject;
+        NSLog(@"key:%@ value:%@", paramKey, paramValue);
+    }];
     return YES;
 }
 
