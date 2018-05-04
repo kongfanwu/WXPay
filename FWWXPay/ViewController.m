@@ -12,6 +12,7 @@
 
 #import "WXApiObject.h"
 #import "WXApi.h"
+#import "FWWebViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)webClick:(id)sender {
+    [self presentViewController:[FWWebViewController new] animated:YES completion:nil];
 }
 - (IBAction)click:(id)sender {
     PayReq *request = [[PayReq alloc] init];

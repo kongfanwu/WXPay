@@ -26,6 +26,14 @@
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNJ-ZO-dBV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifK-aO-VDb">
+                                <rect key="frame" x="154" y="355" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="web"/>
+                                <connections>
+                                    <action selector="webClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kfg-n8-WQs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -33,6 +41,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="A2z-0U-KAE">
+            <objects>
+                <viewController id="Jxk-SW-7hL" customClass="FWWebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBg-pA-L8k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FI3-iS-9r5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n88-nP-j3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1439" y="70"/>
         </scene>
     </scenes>
 </document>
